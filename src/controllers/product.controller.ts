@@ -32,7 +32,6 @@ class ProductController {
 
 		  const { id, quantity } = req.body
 
-      
       const product = await productService.orderProduct({ id, quantity })
       res.status(StatusCodes.Created201).json(product)
       

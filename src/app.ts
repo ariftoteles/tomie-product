@@ -9,6 +9,10 @@ const app = express()
 app.use(express.json())
 app.use(logMiddleware)
 
+app.get("/", (req, res) => {
+  res.send("Welcome to tomie product")
+})
+
 app.use("/", routes)
 
 app.use(errorLoggerMiddleware)
